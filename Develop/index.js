@@ -91,6 +91,14 @@ function getLicenseLink(license) {
     return licenseLink;
 }
 
+function generateFile(fileText) {
+    fs.writeFile("README.md", fileText, function(err) {
+        if (err) {
+            return console.log(err)
+        }
+    })
+}
+
 function generateFileText(title, description, installation, usage, license, contribute, tests) {
     
     let fileText = "";
@@ -105,6 +113,15 @@ function generateFileText(title, description, installation, usage, license, cont
         //console.log(licenseLink)
     
     }
+    
+    if (title !== "" && license !== "None") {
+        fileText += title + "&middot;" + licenseBadge + "\r\r\n";
+    }
+
+
+
+    generateFile(fileText)
+
 }
 
 
