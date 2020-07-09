@@ -114,8 +114,47 @@ function generateFileText(title, description, installation, usage, license, cont
     
     }
     
+    // Adding the title and Badge
     if (title !== "" && license !== "None") {
-        fileText += title + "&middot;" + licenseBadge + "\r\r\n";
+        fileText += '# $' + title + "&middot;" + licenseBadge + "\r\r\n";
+    } else if (title != "") {
+        fileText += title + "\r\r\n";
+    } 
+
+    description.trim();
+    if (description != "") {
+        fileText += "## Description \r\n";
+        fileText += description + "\r\r\n";
+    }
+
+    installation.trim();
+    if (installation != "") {
+        fileText += "## Installation \r\n";
+        fileText += installation + "\r\r\n"
+    }
+
+    usage.trim();
+    if (usage != "") {
+        fileText += "## Usage \r\n"
+        fileText += usage + "\r\r\n"
+    }
+
+    license.trim();
+    if (license != "") {
+        fileText += "## License \r\n"
+        fileText += license + "\r\r\n"
+    }
+
+    contribute.trim()
+    if (contribute != "") {
+        fileText += "## Contributions \r\n"
+        fileText += contribute + "\r\r\n"
+    }
+
+    tests.trim()
+    if (contribute != "") {
+        fileText += "## Tests and Examples \r\n"
+        fileText += tests + "\r\r\n"
     }
 
 
