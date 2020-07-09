@@ -1,5 +1,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const axios = require("axios");
+const { title } = require("process");
+
 const questions = [
     {
         type: "input",
@@ -25,7 +28,7 @@ const questions = [
         type: "list",
         message: "Choose a license for the Project: ",
         name: "license",
-        choices: ["Academic Free License v3.0", "Apache license 2.0", "Mozilla Public License 2.0", "Creative Commons license family", "Boost Software License 1.0", "Eclipse Public License 1.0", "European Union Public License 1.1", "GNU General Public License family", "GNU General Public License v2.0", "GNU General Public License v3.0", "None"]
+        choices: ["Academic Free License v3.0", "Apache license 2.0", "Mozilla Public License 2.0", "Boost Software License 1.0", "Eclipse Public License 1.0", "European Union Public License 1.1", "GNU General Public  v2.0", "GNU General Public License v3.0", "None"]
     },
     {
         type: "input",
@@ -49,10 +52,60 @@ inquirer.prompt(questions).then(function(response) {
     console.log(license)
     console.log(contribute)
     console.log(tests)
+    generateFileText(title, description, installation, usage, license, contribute, tests)
 })
 
 
+function getLicenseBadge(license) {
+    license = license.split(" ").join("%20");
+    const licenseBadge = createBadge(license);
+    return licenseBadge
+}
 
+function createBadge(title) {
+    return "(https://img.shields.io/badge/" + title + "-blue)"
+}
+
+function getLicenseLink(license) {
+    let licenseLink = ""
+    if (license === "Academic Free License v3.0") {
+        licenseLink = "https://opensource.org/licenses/AFL-3.0";
+    } else if (license === "Apache license 2.0") {
+        licenseLink = "https://www.apache.org/licenses/LICENSE-2.0.html";
+    } else if (license === "Mozilla Public License 2.0") {
+        licenseLink = "https://www.mozilla.org/en-US/MPL/2.0/";
+    } else if (license === "Boost Software License 1.0") {
+        licenseLink = "http://zone.ni.com/reference/en-XX/help/373194E-01/cdaq-foss/boost-license-v-1-0/";
+    } else if (license === "Eclipse Public License 1.0") {
+        licenseLink = "https://opensource.org/licenses/EPL-1.0";
+    } else if (license === "European Union Public License 1.1") {
+        licenseLink = "https://spdx.org/licenses/EUPL-1.1.html";
+    } else if (license === "GNU General Public  v2.0") {
+        licenseLink = "https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html";
+    } else if (license === "GNU General Public License v3.0") {
+        licenseLink = "https://www.gnu.org/licenses/gpl-3.0.en.html";
+    } else {
+        licenseLink = "None"
+    }
+
+    return licenseLink;
+}
+
+function generateFileText(title, description, installation, usage, license, contribute, tests) {
+    
+    let fileText = "";
+
+    title.trim();
+    let licenseBadge;
+    let licenseLink;
+    if (license !== "None") {
+        licenseBadge = getLicenseBadge(license);
+        licenseLink = getLicenseLink(license);
+        //console.log(licenseBadge)
+        //console.log(licenseLink)
+    
+    }
+}
 
 
 
