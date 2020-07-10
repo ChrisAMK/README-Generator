@@ -1,7 +1,7 @@
-# The best&middot; ![license](https://img.shields.io/badge/license-Academic%20Free%20License%20v3.0-blue)
+# The Best&middot; ![license](https://img.shields.io/badge/license-Academic%20Free%20License%20v3.0-blue)
 ## Description 
 ```
-iam
+i am 
 ```
 ## Table of Contents 
 * [Installation](#Installation)
@@ -21,7 +21,7 @@ wa
 ## License <a name='License'></a> 
 ```
 Academic Free License v3.0
-[Click Here to go to License Site!](licenseLink)
+![Click Here to go to License Site!](licenseLink)
 ```
 ## Contributions <a name='Contributions'></a> 
 ```
@@ -33,6 +33,6 @@ wa
 ```
 ## Questions <a name='Questions'></a> 
 ```
-If there are any questions feel free to reach me at [Github](https://github.com/ChrisAMK)
+If there are any questions feel free to reach me at ![Github](https://github.com/ChrisAMK)
 or E-mail me at chriskl@live.com
 ```

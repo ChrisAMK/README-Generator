@@ -1,9 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { exit } = require("process");
-// const axios = require("axios");
-// const { title } = require("process");
-
+// Array of object questions to be asked
 const questions = [
     {
         type: "input",
@@ -56,23 +53,18 @@ const questions = [
 // Asks the User for the Project info!
 inquirer.prompt(questions).then(function(response) {
     const {title, description, installation, usage, license, contribute, tests, github, email} = response;
-    console.log(title)
-    console.log(description)
-    console.log(installation)
-    console.log(usage)
-    console.log(license)
-    console.log(contribute)
-    console.log(tests)
     generateFileText(title, description, installation, usage, license, contribute, tests, github, email)
 })
 
-
+// This function gets the license, takes out the spaces and puts in %20 for web readability
+// Then Triggers the makeBadge function for the appropriate license
 function getLicenseBadge(license) {
     license = license.split(" ").join("%20");
     const licenseBadge = makeBadge("license", license);
     return licenseBadge
 }
 
+// This function makes the basic Link and puts it into the Sheilds.io URL
 function makeBadge(type, title) {
     return "![" + type +"](https://img.shields.io/badge/"+ type + "-" + title + "-blue)";
 }
@@ -139,9 +131,6 @@ function generateFileText(title, description, installation, usage, license, cont
     if (license !== "None") {
         licenseBadge = getLicenseBadge(license);
         licenseLink = getLicenseLink(license);
-        //console.log(licenseBadge)
-        console.log(licenseLink)
-    
     }
     
     // Adding the title and Badge
@@ -157,6 +146,7 @@ function generateFileText(title, description, installation, usage, license, cont
         fileText += "```\n" + description + "\r\r\n```\n";
     }
 
+    /// This is the table of contents, it is static since the user cannot change the questions asked
     fileText += "## Table of Contents \r\n";
     fileText += "* [Installation](#Installation)\n* [Usage](#Usage)\n* [License](#License)\n* [Contributions](#Contributions)\n* [Tests and Examples](#Tests)\n* [Questions](#Questions)\r\r\n"
 
@@ -175,7 +165,7 @@ function generateFileText(title, description, installation, usage, license, cont
     if (license != "") {
         fileText += "## License <a name='License'></a> \r\n"
         fileText += "```\n" + license + "\r\r\n"
-        fileText += "[Click Here to go to License Site!](licenseLink)\r\r\n```\n"
+        fileText += "![Click Here to go to License Site!](licenseLink)\r\r\n```\n"
     }
     
     if (contribute != "") {
@@ -190,7 +180,7 @@ function generateFileText(title, description, installation, usage, license, cont
 
     if (github != "" && email != "") {
         fileText += "## Questions <a name='Questions'></a> \r\n"
-        fileText += "```\nIf there are any questions feel free to reach me at [Github](https://github.com/" + github + ")\r\r\n" 
+        fileText += "```\nIf there are any questions feel free to reach me at ![Github](https://github.com/" + github + ")\r\r\n" 
         fileText += "or E-mail me at " + email + "\r\r\n```\n"
     }
 
@@ -198,36 +188,7 @@ function generateFileText(title, description, installation, usage, license, cont
         fileText = "## Important information was Left out \r\r\n\ Please include a Title, Description, Email and Github account as Minimum \r\n Please Try Again"
     }
 
+    // Executes the generateFile Function with the text built in
     generateFile(fileText)
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// array of questions for user
-
-
-// // function to write README file
-// function writeToFile(fileName, data) {
-// }
-
-// // function to initialize program
-// function init() {
-
-// }
-
-// // function call to initialize program
-// init();
