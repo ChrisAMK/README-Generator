@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const axios = require("axios");
-const { title } = require("process");
+// const axios = require("axios");
+// const { title } = require("process");
 
 const questions = [
     {
@@ -104,6 +104,12 @@ function generateFileText(title, description, installation, usage, license, cont
     let fileText = "";
 
     title.trim();
+    description.trim();
+    installation.trim();
+    usage.trim();
+    license.trim();
+    contribute.trim()
+    tests.trim()
     let licenseBadge;
     let licenseLink;
     if (license !== "None") {
@@ -121,38 +127,40 @@ function generateFileText(title, description, installation, usage, license, cont
         fileText += title + "\r\r\n";
     } 
 
-    description.trim();
+    // Adding Description etc for each!
     if (description != "") {
         fileText += "## Description \r\n";
         fileText += description + "\r\r\n";
     }
 
-    installation.trim();
+    fileText += "## Table of Contents \r\n";
+    fileText += "*installation\n*usage\n*license\n*contribute\n*tests\r\r\n"
+
     if (installation != "") {
         fileText += "## Installation \r\n";
-        fileText += installation + "\r\r\n"
+        fileText += installation + "\r\r\n";
     }
 
-    usage.trim();
+    
     if (usage != "") {
         fileText += "## Usage \r\n"
         fileText += usage + "\r\r\n"
     }
 
-    license.trim();
+    
     if (license != "") {
         fileText += "## License \r\n"
         fileText += license + "\r\r\n"
     }
 
-    contribute.trim()
+    
     if (contribute != "") {
         fileText += "## Contributions \r\n"
         fileText += contribute + "\r\r\n"
     }
 
-    tests.trim()
-    if (contribute != "") {
+    
+    if (tests != "") {
         fileText += "## Tests and Examples \r\n"
         fileText += tests + "\r\r\n"
     }
