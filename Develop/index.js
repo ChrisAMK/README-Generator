@@ -110,7 +110,7 @@ function generateFile(fileText) {
     })
 }
 
-function generateFileText(title, description, installation, usage, license, contribute, tests, github, email) {
+function generateFileText(title, description, installation, usage, license, contribute, tests, github, email, licenseLink) {
     
     let fileText = "";
     var missingValues = false
@@ -132,12 +132,11 @@ function generateFileText(title, description, installation, usage, license, cont
     }
 
     let licenseBadge;
-    let licenseLink;
     if (license !== "None") {
         licenseBadge = getLicenseBadge(license);
         licenseLink = getLicenseLink(license);
         //console.log(licenseBadge)
-        //console.log(licenseLink)
+        console.log(licenseLink)
     
     }
     
@@ -155,37 +154,38 @@ function generateFileText(title, description, installation, usage, license, cont
     }
 
     fileText += "## Table of Contents \r\n";
-    fileText += "* Installation\n* Usage\n* License\n* Contributions\n* Tests\r\r\n"
+    fileText += "* [Installation](#Installation\n* [Usage](#Usage)\n* [License](#License)\n* [Contributions](#Contributions)\n* [Tests and Examples](#Tests)\n * [Questions](#Questions)\r\r\n"
 
     if (installation != "") {
-        fileText += "## Installation \r\n";
+        fileText += "## Installation <a name='Installation'></a> \r\n";
         fileText += "```\n" + installation + "\r\r\n```\n";
     }
 
     
     if (usage != "") {
-        fileText += "## Usage \r\n"
+        fileText += "## Usage <a name='Usage'></a> \r\n"
         fileText += "```\n" + usage + "\r\r\n```\n"
     }
 
     
     if (license != "") {
-        fileText += "## License \r\n"
-        fileText += "```\n" + license + "\r\r\n```\n"
+        fileText += "## License <a name='License'></a> \r\n"
+        fileText += "```\n" + license + "\r\r\n"
+        fileText += licenseLink + "\r\r\n```\n"
     }
     
     if (contribute != "") {
-        fileText += "## Contributions \r\n"
+        fileText += "## Contributions <a name='Contributions'></a> \r\n"
         fileText += "```\n" + contribute + "\r\r\n```\n"
     }
 
     if (tests != "") {
-        fileText += "## Tests and Examples \r\n"
+        fileText += "## Tests and Examples <a name='Tests'></a> \r\n"
         fileText += "```\n" + tests + "\r\r\n```\n"
     }
 
     if (github != "" && email != "") {
-        fileText += "## Questions \r\n"
+        fileText += "## Questions <a name='Questions'></a> \r\n"
         fileText += "```\nIf there are any questions feel free to reach me at https://github.com/" + github + " or E-mail me at " + email + "\r\r\n```\n"
     }
 

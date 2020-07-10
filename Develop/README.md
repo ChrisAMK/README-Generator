@@ -1,35 +1,37 @@
-# $The best Thing ever&middot;(https://img.shields.io/badge/Academic%20Free%20License%20v3.0-blue)
+# $The DES&middot;(https://img.shields.io/badge/Mozilla%20Public%20License%202.0-blue)
 ## Description 
 ```
-This is the coolest
+THis is the DES
 ```
 ## Table of Contents 
-* Installation
-* Usage
-* License
-* Contributions
-* Tests
-## Installation 
+* [Installation](#Installation
+* [Usage](#Usage)
+* [License](#License)
+* [Contributions](#Contributions)
+* [Tests and Examples](#Tests)
+ * [Questions](#Questions)
+## Installation <a name='Installation'></a> 
 ```
-Just install it
+Download
 ```
-## Usage 
+## Usage <a name='Usage'></a> 
 ```
-to be used for fun
+PLay
 ```
-## License 
+## License <a name='License'></a> 
 ```
-Academic Free License v3.0
+Mozilla Public License 2.0
+https://www.mozilla.org/en-US/MPL/2.0/
 ```
-## Contributions 
+## Contributions <a name='Contributions'></a> 
 ```
-Just me
+NA
 ```
-## Tests and Examples 
+## Tests and Examples <a name='Tests'></a> 
 ```
-The thing is to be used
+YO
 ```
-## Questions 
+## Questions <a name='Questions'></a> 
 ```
 If there are any questions feel free to reach me at https://github.com/ChrisAMK or E-mail me at chriskl@live.com
 ```
