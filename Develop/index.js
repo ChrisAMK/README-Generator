@@ -109,6 +109,7 @@ function generateFileText(title, description, installation, usage, license, cont
     
     let fileText = "";
     var missingValues = false
+    var creatorStamp = ""
 
     // Trimming any spare space entered by user
     title.trim();
@@ -135,7 +136,7 @@ function generateFileText(title, description, installation, usage, license, cont
     
     // Adding the title and Badge
     if (title !== "" && license !== "None") {
-        fileText += '# ' + title + "&middot; " + licenseBadge + "\r\r\n";
+        fileText += '# ' + title + "&middot; " + licenseBadge + " ![Maker's Mark](https://img.shields.io/github/commit-activity/m/ChrisAMK/README-Generator?style=plastic)\r\r\n";
     } else if (title != "") {
         fileText += title + "\r\r\n";
     } 

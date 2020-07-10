@@ -1,7 +1,7 @@
-# I AM THE BEST&middot; ![license](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-blue)
+# The best&middot; ![license](https://img.shields.io/badge/license-Academic%20Free%20License%20v3.0-blue) ![Maker's Mark](https://img.shields.io/github/commit-activity/m/ChrisAMK/README-Generator?style=plastic)
 ## Description 
 ```
-i really am
+iam
 ```
 ## Table of Contents 
 * [Installation](#Installation)
@@ -12,14 +12,14 @@ i really am
 * [Questions](#Questions)
 ## Installation <a name='Installation'></a> 
 ```
-wwa
+wa
 ```
 ## Usage <a name='Usage'></a> 
 ```
 wa
 ```
 ## License <a name='License'></a> 
-Mozilla Public License 2.0
+Academic Free License v3.0
 [Click Here to go to License Site!](licenseLink)
 ## Contributions <a name='Contributions'></a> 
 ```
