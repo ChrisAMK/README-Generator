@@ -166,7 +166,7 @@ function generateFileText(title, description, installation, usage, license, cont
     if (license != "") {
         fileText += "## License <a name='License'></a> \r\n"
         fileText += license + "\r\r\n"
-        fileText += "[Click Here to go to License Site!](licenseLink)\r\r\n"
+        fileText += "[Click Here to go to License Site!]("+ licenseLink + ")\r\r\n"
     }
     
     if (contribute != "") {

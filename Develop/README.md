@@ -1,7 +1,7 @@
-# I am the best&middot; ![license](https://img.shields.io/badge/license-Academic%20Free%20License%20v3.0-blue) ![Maker's Mark](https://img.shields.io/github/repo-size/ChrisAMK/README-Generator?style=plastic)
+# the best&middot; ![license](https://img.shields.io/badge/license-Academic%20Free%20License%20v3.0-blue) ![Maker's Mark](https://img.shields.io/github/repo-size/ChrisAMK/README-Generator?style=plastic)
 ## Description 
 ```
-aw
+wa
 ```
 ## Table of Contents 
 * [Installation](#Installation)
@@ -20,7 +20,7 @@ wa
 ```
 ## License <a name='License'></a> 
 Academic Free License v3.0
-[Click Here to go to License Site!](licenseLink)
+[Click Here to go to License Site!](https://opensource.org/licenses/AFL-3.0)
 ## Contributions <a name='Contributions'></a> 
 ```
 wa
