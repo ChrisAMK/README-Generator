@@ -1,0 +1,24 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "``` wa\r\r ``` ## Table of Contents \r * [Installation](#Installation) * [Usage](#Usage) * [License](#License) * [Contributions](#Contributions) * [Tests and Examples](#Tests) * [Questions](#Questions)\r\r ## Installation <a name='Installation'></a> \r ``` wa\r\r ``` ## Usage <a name='Usage'></a> \r ``` wa\r\r ``` ## License <a name='License'></a> \r Academic Free License v3.0\r\r [Click Here to go to License Site!](https://opensource.org/licenses/AFL-3.0)\r\r ## Contributions <a name='Contributions'></a> \r ``` wa\r\r ``` ## Tests and Examples <a name='Tests'></a> \r ``` wa\r\r ``` ## Questions <a name='Questions'></a> \r If there are any questions feel free to reach me at [Github](https://github.com/ChrisAMK)\r\r or E-mail me at chriskl@live.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "inquirer": "^6.5.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisAMK/README-Generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChrisAMK/README-Generator/issues"
+  },
+  "homepage": "https://github.com/ChrisAMK/README-Generator#readme"
+}
