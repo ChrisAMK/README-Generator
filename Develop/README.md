@@ -1,19 +1,25 @@
-# $The best Project ever&middot;(https://img.shields.io/badge/Academic%20Free%20License%20v3.0-blue)
+# $The best project&middot;(https://img.shields.io/badge/Academic%20Free%20License%20v3.0-blue)
 ## Description 
-this is such a great project
+```
+it is a cool project
+```
 ## Table of Contents 
-* installation
-* usage
-* license
-* contribute
-* tests
+```
+* Installation
+* Usage
+* License
+* Contributions
+* Tests
+```
 ## Installation 
-install it and enjoy
+install and enjoy
 ## Usage 
 for fun
 ## License 
 Academic Free License v3.0
 ## Contributions 
-just me
+Just me
 ## Tests and Examples 
-yo have fun
+just do it
+## Questions 
+If there are any questions feel free to reach me at https://github.com/ChrisAMK or E-mail me at chriskl@live.com
