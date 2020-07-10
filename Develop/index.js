@@ -39,12 +39,22 @@ const questions = [
         type: "input",
         message: "Write test scenerios and examples of how to use your Application",
         name: "tests"
+    },
+    {
+        type: "input",
+        message: "Please enter your Github Profile name: ",
+        name: "github"
+    },
+    {
+        type: "input",
+        message: "Please enter your Email Address",
+        name: "email"
     }
 ];
 
 // Asks the User for the Project info!
 inquirer.prompt(questions).then(function(response) {
-    const {title, description, installation, usage, license, contribute, tests} = response;
+    const {title, description, installation, usage, license, contribute, tests, github, email} = response;
     console.log(title)
     console.log(description)
     console.log(installation)
@@ -52,7 +62,7 @@ inquirer.prompt(questions).then(function(response) {
     console.log(license)
     console.log(contribute)
     console.log(tests)
-    generateFileText(title, description, installation, usage, license, contribute, tests)
+    generateFileText(title, description, installation, usage, license, contribute, tests, github, email)
 })
 
 
@@ -99,7 +109,7 @@ function generateFile(fileText) {
     })
 }
 
-function generateFileText(title, description, installation, usage, license, contribute, tests) {
+function generateFileText(title, description, installation, usage, license, contribute, tests, github, email) {
     
     let fileText = "";
 
@@ -108,8 +118,11 @@ function generateFileText(title, description, installation, usage, license, cont
     installation.trim();
     usage.trim();
     license.trim();
-    contribute.trim()
-    tests.trim()
+    contribute.trim();
+    tests.trim();
+    github.trim();
+    email.trim();
+
     let licenseBadge;
     let licenseLink;
     if (license !== "None") {
@@ -130,11 +143,11 @@ function generateFileText(title, description, installation, usage, license, cont
     // Adding Description etc for each!
     if (description != "") {
         fileText += "## Description \r\n";
-        fileText += description + "\r\r\n";
+        fileText += "```\n" + description + "\r\r\n```\n";
     }
 
     fileText += "## Table of Contents \r\n";
-    fileText += "* installation\n* usage\n* license\n* contribute\n* tests\r\r\n"
+    fileText += "```\n* Installation\n* Usage\n* License\n* Contributions\n* Tests\r\r\n```\n"
 
     if (installation != "") {
         fileText += "## Installation \r\n";
@@ -163,6 +176,12 @@ function generateFileText(title, description, installation, usage, license, cont
     if (tests != "") {
         fileText += "## Tests and Examples \r\n"
         fileText += tests + "\r\r\n"
+    }
+
+    if (github != "" && email != "") {
+        fileText += "## Questions \r\n"
+        fileText += "If there are any questions feel free to reach me at https://github.com/" + github + " or E-mail me at " + email
+
     }
 
 
