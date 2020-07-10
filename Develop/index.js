@@ -134,7 +134,7 @@ function generateFileText(title, description, installation, usage, license, cont
     }
 
     fileText += "## Table of Contents \r\n";
-    fileText += "*installation\n*usage\n*license\n*contribute\n*tests\r\r\n"
+    fileText += "* installation\n* usage\n* license\n* contribute\n* tests\r\r\n"
 
     if (installation != "") {
         fileText += "## Installation \r\n";

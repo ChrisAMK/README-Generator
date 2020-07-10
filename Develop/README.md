@@ -1,19 +1,19 @@
-# $the best&middot;(https://img.shields.io/badge/Academic%20Free%20License%20v3.0-blue)
+# $The best Project ever&middot;(https://img.shields.io/badge/Academic%20Free%20License%20v3.0-blue)
 ## Description 
-the absole
+this is such a great project
 ## Table of Contents 
-*installation
-*usage
-*license
-*contribute
-*tests
+* installation
+* usage
+* license
+* contribute
+* tests
 ## Installation 
-eaw
+install it and enjoy
 ## Usage 
-the best
+for fun
 ## License 
 Academic Free License v3.0
 ## Contributions 
-aeat
+just me
 ## Tests and Examples 
-wads
+yo have fun
