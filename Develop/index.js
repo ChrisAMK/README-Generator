@@ -69,14 +69,15 @@ inquirer.prompt(questions).then(function(response) {
 
 function getLicenseBadge(license) {
     license = license.split(" ").join("%20");
-    const licenseBadge = createBadge(license);
+    const licenseBadge = makeBadge("license", license);
     return licenseBadge
 }
 
-function createBadge(title) {
-    return "(https://img.shields.io/badge/" + title + "-blue)"
+function makeBadge(type, title) {
+    return "![" + type +"](https://img.shields.io/badge/"+ type + "-" + title + "-blue)";
 }
 
+// This function detects where to get the License link from
 function getLicenseLink(license) {
     let licenseLink = ""
     if (license === "Academic Free License v3.0") {
@@ -102,6 +103,7 @@ function getLicenseLink(license) {
     return licenseLink;
 }
 
+// This function takes in the fileText variable that is built up with If statements, then writes to a README.md file.
 function generateFile(fileText) {
     fs.writeFile("README.md", fileText, function(err) {
         if (err) {
@@ -110,11 +112,13 @@ function generateFile(fileText) {
     })
 }
 
+// This function takes in the user values and writes to a variable called FileText, then is put into the generate file Function above
 function generateFileText(title, description, installation, usage, license, contribute, tests, github, email, licenseLink) {
     
     let fileText = "";
     var missingValues = false
 
+    // Trimming any spare space entered by user
     title.trim();
     description.trim();
     installation.trim();
@@ -131,7 +135,7 @@ function generateFileText(title, description, installation, usage, license, cont
         missingValues = true
     }
 
-    let licenseBadge;
+    // let licenseBadge;
     if (license !== "None") {
         licenseBadge = getLicenseBadge(license);
         licenseLink = getLicenseLink(license);
@@ -142,7 +146,7 @@ function generateFileText(title, description, installation, usage, license, cont
     
     // Adding the title and Badge
     if (title !== "" && license !== "None") {
-        fileText += '# $' + title + "&middot;" + licenseBadge + "\r\r\n";
+        fileText += '# ' + title + "&middot; " + licenseBadge + "\r\r\n";
     } else if (title != "") {
         fileText += title + "\r\r\n";
     } 
@@ -154,7 +158,7 @@ function generateFileText(title, description, installation, usage, license, cont
     }
 
     fileText += "## Table of Contents \r\n";
-    fileText += "* [Installation](#Installation\n* [Usage](#Usage)\n* [License](#License)\n* [Contributions](#Contributions)\n* [Tests and Examples](#Tests)\n * [Questions](#Questions)\r\r\n"
+    fileText += "* [Installation](#Installation)\n* [Usage](#Usage)\n* [License](#License)\n* [Contributions](#Contributions)\n* [Tests and Examples](#Tests)\n* [Questions](#Questions)\r\r\n"
 
     if (installation != "") {
         fileText += "## Installation <a name='Installation'></a> \r\n";
@@ -171,7 +175,7 @@ function generateFileText(title, description, installation, usage, license, cont
     if (license != "") {
         fileText += "## License <a name='License'></a> \r\n"
         fileText += "```\n" + license + "\r\r\n"
-        fileText += licenseLink + "\r\r\n```\n"
+        fileText += "[Click Here to go to License Site!](licenseLink)\r\r\n```\n"
     }
     
     if (contribute != "") {
@@ -186,11 +190,12 @@ function generateFileText(title, description, installation, usage, license, cont
 
     if (github != "" && email != "") {
         fileText += "## Questions <a name='Questions'></a> \r\n"
-        fileText += "```\nIf there are any questions feel free to reach me at https://github.com/" + github + " or E-mail me at " + email + "\r\r\n```\n"
+        fileText += "```\nIf there are any questions feel free to reach me at [Github](https://github.com/" + github + ")\r\r\n" 
+        fileText += "or E-mail me at " + email + "\r\r\n```\n"
     }
 
     if (missingValues == true) {
-        fileText = "## Important information was Left out \r\r\n\ Please include a Title, Description, Email and Github account as Minimum"
+        fileText = "## Important information was Left out \r\r\n\ Please include a Title, Description, Email and Github account as Minimum \r\n Please Try Again"
     }
 
     generateFile(fileText)

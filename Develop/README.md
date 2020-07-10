@@ -1,37 +1,38 @@
-# $The DES&middot;(https://img.shields.io/badge/Mozilla%20Public%20License%202.0-blue)
+# The best&middot; ![license](https://img.shields.io/badge/license-Academic%20Free%20License%20v3.0-blue)
 ## Description 
 ```
-THis is the DES
+iam
 ```
 ## Table of Contents 
-* [Installation](#Installation
+* [Installation](#Installation)
 * [Usage](#Usage)
 * [License](#License)
 * [Contributions](#Contributions)
 * [Tests and Examples](#Tests)
- * [Questions](#Questions)
+* [Questions](#Questions)
 ## Installation <a name='Installation'></a> 
 ```
-Download
+wa
 ```
 ## Usage <a name='Usage'></a> 
 ```
-PLay
+wa
 ```
 ## License <a name='License'></a> 
 ```
-Mozilla Public License 2.0
-https://www.mozilla.org/en-US/MPL/2.0/
+Academic Free License v3.0
+[Click Here to go to License Site!](licenseLink)
 ```
 ## Contributions <a name='Contributions'></a> 
 ```
-NA
+wa
 ```
 ## Tests and Examples <a name='Tests'></a> 
 ```
-YO
+wa
 ```
 ## Questions <a name='Questions'></a> 
 ```
-If there are any questions feel free to reach me at https://github.com/ChrisAMK or E-mail me at chriskl@live.com
+If there are any questions feel free to reach me at [Github](https://github.com/ChrisAMK)
+or E-mail me at chriskl@live.com
 ```
