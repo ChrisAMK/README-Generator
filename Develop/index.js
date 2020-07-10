@@ -164,8 +164,8 @@ function generateFileText(title, description, installation, usage, license, cont
     
     if (license != "") {
         fileText += "## License <a name='License'></a> \r\n"
-        fileText += "```\n" + license + "\r\r\n"
-        fileText += "![Click Here to go to License Site!](licenseLink)\r\r\n```\n"
+        fileText += license + "\r\r\n"
+        fileText += "[Click Here to go to License Site!](licenseLink)\r\r\n"
     }
     
     if (contribute != "") {
@@ -180,8 +180,8 @@ function generateFileText(title, description, installation, usage, license, cont
 
     if (github != "" && email != "") {
         fileText += "## Questions <a name='Questions'></a> \r\n"
-        fileText += "```\nIf there are any questions feel free to reach me at ![Github](https://github.com/" + github + ")\r\r\n" 
-        fileText += "or E-mail me at " + email + "\r\r\n```\n"
+        fileText += "If there are any questions feel free to reach me at [Github](https://github.com/" + github + ")\r\r\n" 
+        fileText += "or E-mail me at " + email + "\r\r\n"
     }
 
     if (missingValues == true) {

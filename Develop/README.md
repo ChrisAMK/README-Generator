@@ -1,7 +1,7 @@
-# The Best&middot; ![license](https://img.shields.io/badge/license-Academic%20Free%20License%20v3.0-blue)
+# I AM THE BEST&middot; ![license](https://img.shields.io/badge/license-Mozilla%20Public%20License%202.0-blue)
 ## Description 
 ```
-i am 
+i really am
 ```
 ## Table of Contents 
 * [Installation](#Installation)
@@ -12,17 +12,15 @@ i am
 * [Questions](#Questions)
 ## Installation <a name='Installation'></a> 
 ```
-wa
+wwa
 ```
 ## Usage <a name='Usage'></a> 
 ```
 wa
 ```
 ## License <a name='License'></a> 
-```
-Academic Free License v3.0
-![Click Here to go to License Site!](licenseLink)
-```
+Mozilla Public License 2.0
+[Click Here to go to License Site!](licenseLink)
 ## Contributions <a name='Contributions'></a> 
 ```
 wa
@@ -32,7 +30,5 @@ wa
 wa
 ```
 ## Questions <a name='Questions'></a> 
-```
-If there are any questions feel free to reach me at ![Github](https://github.com/ChrisAMK)
+If there are any questions feel free to reach me at [Github](https://github.com/ChrisAMK)
 or E-mail me at chriskl@live.com
-```
