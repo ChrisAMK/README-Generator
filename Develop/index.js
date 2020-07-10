@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const { exit } = require("process");
 // const axios = require("axios");
 // const { title } = require("process");
 
@@ -112,6 +113,7 @@ function generateFile(fileText) {
 function generateFileText(title, description, installation, usage, license, contribute, tests, github, email) {
     
     let fileText = "";
+    var missingValues = false
 
     title.trim();
     description.trim();
@@ -122,6 +124,12 @@ function generateFileText(title, description, installation, usage, license, cont
     tests.trim();
     github.trim();
     email.trim();
+
+    // Important Error Handling
+    if (title === "" || description === "" || github === "" || email === "") {
+        console.log("Missing Vital Information: Title, Description, Github and Email are Mandatory");
+        missingValues = true
+    }
 
     let licenseBadge;
     let licenseLink;
@@ -147,44 +155,43 @@ function generateFileText(title, description, installation, usage, license, cont
     }
 
     fileText += "## Table of Contents \r\n";
-    fileText += "```\n* Installation\n* Usage\n* License\n* Contributions\n* Tests\r\r\n```\n"
+    fileText += "* Installation\n* Usage\n* License\n* Contributions\n* Tests\r\r\n"
 
     if (installation != "") {
         fileText += "## Installation \r\n";
-        fileText += installation + "\r\r\n";
+        fileText += "```\n" + installation + "\r\r\n```\n";
     }
 
     
     if (usage != "") {
         fileText += "## Usage \r\n"
-        fileText += usage + "\r\r\n"
+        fileText += "```\n" + usage + "\r\r\n```\n"
     }
 
     
     if (license != "") {
         fileText += "## License \r\n"
-        fileText += license + "\r\r\n"
+        fileText += "```\n" + license + "\r\r\n```\n"
     }
-
     
     if (contribute != "") {
         fileText += "## Contributions \r\n"
-        fileText += contribute + "\r\r\n"
+        fileText += "```\n" + contribute + "\r\r\n```\n"
     }
 
-    
     if (tests != "") {
         fileText += "## Tests and Examples \r\n"
-        fileText += tests + "\r\r\n"
+        fileText += "```\n" + tests + "\r\r\n```\n"
     }
 
     if (github != "" && email != "") {
         fileText += "## Questions \r\n"
-        fileText += "If there are any questions feel free to reach me at https://github.com/" + github + " or E-mail me at " + email
-
+        fileText += "```\nIf there are any questions feel free to reach me at https://github.com/" + github + " or E-mail me at " + email + "\r\r\n```\n"
     }
 
-
+    if (missingValues == true) {
+        fileText = "## Important information was Left out \r\r\n\ Please include a Title, Description, Email and Github account as Minimum"
+    }
 
     generateFile(fileText)
 
