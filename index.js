@@ -158,7 +158,7 @@ function generateFileText(title, description, installation, usage, license, cont
     
     if (usage != "") {
         fileText += "## Usage <a name='Usage'></a> \r\n";
-        fileText += "```\n" + usage + "\r\r\n```\n";
+        fileText += usage + "\r\r\n";
     }
 
     
@@ -175,7 +175,7 @@ function generateFileText(title, description, installation, usage, license, cont
 
     if (tests != "") {
         fileText += "## Tests and Examples <a name='Tests'></a> \r\n";
-        fileText += "```\n" + tests + "\r\r\n```\n";
+        fileText += tests + "\r\r\n";
     }
 
     if (github != "" && email != "") {
