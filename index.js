@@ -152,7 +152,7 @@ function generateFileText(title, description, installation, usage, license, cont
 
     if (installation != "") {
         fileText += "## Installation <a name='Installation'></a> \r\n";
-        fileText += "```\n" + installation + "\r\r\n```\n";
+        fileText += installation + "\r\r\n";
     }
 
     
