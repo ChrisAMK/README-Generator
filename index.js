@@ -66,7 +66,7 @@ function getLicenseBadge(license) {
 
 // This function makes the basic Link and puts it into the Sheilds.io URL
 function makeBadge(type, title) {
-    return "![" + type +"](https://img.shields.io/badge/"+ type + "-" + title + "-blue)";
+    return `![${type}](https://img.shields.io/badge/${type}-${title}-blue)`;
 }
 
 // This function detects where to get the License link from
@@ -143,7 +143,7 @@ function generateFileText(title, description, installation, usage, license, cont
     // Adding Description etc for each!
     if (description != "") {
         fileText += "## Description \r\n";
-        fileText += "```\n" + description + "\r\r\n```\n";
+        fileText += description + "\r\r\n";
     }
 
     /// This is the table of contents, it is static since the user cannot change the questions asked
